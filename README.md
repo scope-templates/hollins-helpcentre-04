@@ -90,3 +90,10 @@ tickets, with the months and the sections as uneven as they are in real life. It
 `--check` tells you whether the file still matches the script. The app loads it the first time it
 opens an empty database, and `python scripts/seed.py` does the same by hand, with `--drop` to empty
 the collections and load it again.
+
+## The weekly review
+
+`python scripts/weekly_review.py` is what we do on a Monday instead of reading everything: it takes fifty
+tickets at random from the last week, sends them to the model in one call and prints the themes it finds.
+It needs `OPENAI_API_KEY`. It is quick and it is a sample, so the themes and the counts come out
+different each time it runs; we paste whichever run we get into the desk channel.
